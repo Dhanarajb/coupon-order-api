@@ -1,10 +1,13 @@
-// server.js
 import express from "express";
+import cors from "cors"; // Import cors package
 const app = express();
 const PORT = process.env.PORT || 3200;
 
 // Middleware to parse JSON bodies
 app.use(express.json());
+
+// Use cors middleware to enable CORS
+app.use(cors());
 
 // Sample data
 const data = {
